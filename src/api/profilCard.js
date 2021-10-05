@@ -16,21 +16,6 @@ function CardProfil() {
       <Card id="card-1" className="card" draggable="true">
         <p>{users}</p>
       </Card>
-      <Card id="card-2" className="card" draggable="true">
-        <p>{users}</p>
-      </Card>
-      <Card id="card-3" className="card" draggable="true">
-        <p>{users}</p>
-      </Card>
-      <Card id="card-4" className="card" draggable="true">
-        <p>{users}</p>
-      </Card>
-      <Card id="card-5" className="card" draggable="true">
-        <p>{users}</p>
-      </Card>
-      <Card id="card-6" className="card" draggable="true">
-        <p>{users}</p>
-      </Card>
     </div>
   );
 }

@@ -11,13 +11,22 @@ export default function App() {
       setUsers(result.data);
     });
   }, []);
+  setInterval(() => {
+    const boardCard = document.querySelectorAll("#board-2 .card");
+    const objUser = [];
+    // console.log(boardCard);
+    boardCard.forEach((element) => {
+      objUser.push({ element });
+    });
+    // console.log(objUser);
+  }, 5000);
 
   return (
     <div className="App">
       <main className="flexbox">
         <Board id="board-1" className="board">
           <h3>All List</h3>
-          <Profil users={users} />
+          <Profil key="1" users={users} />
         </Board>
         <Board id="board-2" className="board">
           <h3>My List</h3>

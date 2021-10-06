@@ -1,5 +1,0 @@
-function Obj(){
-    return(
-        
-    )
-}

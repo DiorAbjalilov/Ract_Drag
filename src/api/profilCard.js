@@ -1,23 +1,18 @@
-import { useEffect, useState } from "react";
-import load from "./load";
 import Card from "../components/Card";
+import Avatar from "./Avatar";
+import NameCity from "./NameCity";
 
-function CardProfil() {
-  const [users, setUsers] = useState(null);
-  useEffect(() => {
-    load().then((result) => {
-      console.log(result.data[1].email);
-      setUsers(result.data[1].email);
-    });
-  }, []);
-
+function ProfilCard({ user }) {
+  const name = `${user.first_name} ${user.last_name}`;
+  const id = `card-${user.id}`;
   return (
-    <div>
-      <Card id="card-1" className="card" draggable="true">
-        <p>{users}</p>
+    <>
+      <Card id={id} className="card" draggable="true">
+        <NameCity name={name} />
+        <Avatar url={user.avatar} />
       </Card>
-    </div>
+    </>
   );
 }
 
-export default CardProfil;
+export default ProfilCard;

@@ -7,7 +7,7 @@ export default function card(props) {
     e.dataTransfer.setData("card_id", target.id);
 
     setTimeout(() => {
-      target.style.display = "block";
+      target.style.display = "flex";
     }, 0);
   };
   const dragOver = (e) => {

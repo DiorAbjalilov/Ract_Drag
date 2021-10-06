@@ -1,4 +1,4 @@
-function load() {
+function Load() {
   const url = "https://reqres.in/api/users?";
   return fetch(url)
     .then((res) => res.json())
@@ -7,4 +7,4 @@ function load() {
     });
 }
 
-export default load;
+export default Load;

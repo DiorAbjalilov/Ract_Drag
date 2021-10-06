@@ -7,7 +7,7 @@ function Board(props) {
 
     const card = document.getElementById(card_id);
     e.target.style.transition = "1s";
-    card.style.display = "block";
+    card.style.display = "flex";
 
     e.target.appendChild(card);
   };

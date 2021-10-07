@@ -3,6 +3,7 @@ import Load from "./api/Load";
 import "./App.css";
 import Profil from "./api/Profil";
 import { useEffect, useState } from "react";
+// import ReactJson from "react-json-view";
 
 export default function App() {
   const [users, setUsers] = useState([]);
@@ -11,15 +12,16 @@ export default function App() {
       setUsers(result.data);
     });
   }, []);
-  setInterval(() => {
-    const boardCard = document.querySelectorAll("#board-2 .card");
-    const objUser = [];
-    // console.log(boardCard);
-    boardCard.forEach((element) => {
-      objUser.push({ element });
-    });
-    // console.log(objUser);
-  }, 5000);
+  const clickHandle = () => {
+    const board = document.querySelector("#board-2");
+    const objUser = {
+      item: board.innerHTML,
+    };
+    const objectString = JSON.stringify(objUser);
+    const objectParse = JSON.parse(objectString);
+    console.log(objectString);
+    console.log(objectParse);
+  };
 
   return (
     <div className="App">
@@ -30,7 +32,9 @@ export default function App() {
         </Board>
         <Board id="board-2" className="board">
           <h3>My List</h3>
-          <button className="btn">Submit List</button>
+          <button onClick={clickHandle} className="btn">
+            Submit List
+          </button>
         </Board>
       </main>
     </div>

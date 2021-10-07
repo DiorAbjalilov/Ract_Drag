@@ -7,11 +7,13 @@ import { useEffect, useState } from "react";
 
 export default function App() {
   const [users, setUsers] = useState([]);
+
   useEffect(() => {
     Load().then((result) => {
       setUsers(result.data);
     });
   }, []);
+
   const clickHandle = () => {
     const board = document.querySelector("#board-2");
     const objUser = {

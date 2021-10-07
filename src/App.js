@@ -21,6 +21,12 @@ export default function App() {
     const objectParse = JSON.parse(objectString);
     console.log(objectString);
     console.log(objectParse);
+
+    const flexbox = document.querySelector(".App");
+    const divbox = document.createElement("div");
+    flexbox.appendChild(divbox);
+    divbox.className = "board";
+    divbox.innerHTML = objectParse.item;
   };
 
   return (

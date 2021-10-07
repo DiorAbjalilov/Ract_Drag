@@ -57,3 +57,6 @@ h3 {
 .btn:active {
   background-color: rgb(109, 230, 189);
 }
+.divNew {
+  border: 2px solid black;
+}

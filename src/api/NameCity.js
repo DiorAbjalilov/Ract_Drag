@@ -1,6 +1,5 @@
 function NameCity({ name }) {
   let date = new Date().toLocaleTimeString();
-  console.log(date);
   return (
     <div>
       <h4>{name}</h4>

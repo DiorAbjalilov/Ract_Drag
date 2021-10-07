@@ -3,8 +3,6 @@ import Load from "./api/Load";
 import "./App.css";
 import Profil from "./api/Profil";
 import { useEffect, useState } from "react";
-// import ReactJson from "react-json-view";
-
 export default function App() {
   const [users, setUsers] = useState([]);
 
@@ -24,7 +22,7 @@ export default function App() {
     console.log(objectString);
     console.log(objectParse);
 
-    const flexbox = document.querySelector(".App");
+    const flexbox = document.querySelector(".flexbox");
     const divbox = document.createElement("div");
     flexbox.appendChild(divbox);
     divbox.className = "board";
